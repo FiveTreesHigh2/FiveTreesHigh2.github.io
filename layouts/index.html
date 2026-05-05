@@ -40,7 +40,7 @@
 <section class="section container">
   <h2 class="section-title">最近想法</h2>
   <ul class="post-list">
-    {{ range first 5 (where .Site.RegularPages "Section" "thinks") }}
+    {{ range first 5 (where .Site.RegularPages "Section" "thinkings") }}
       <li class="post-list-item">
         <a href="{{ .RelPermalink }}">
           <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
