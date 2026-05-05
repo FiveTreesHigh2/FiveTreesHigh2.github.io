@@ -41,7 +41,7 @@ title = "FiveTrees small place"
 
 [[menu.main]]
   name = "想法"
-  url = "/notes/"
+  url = "/thinkings/"
   weight = 3
 
 [[menu.main]]
