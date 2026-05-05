@@ -40,6 +40,11 @@ title = "FiveTrees small place"
   weight = 2
 
 [[menu.main]]
+  name = "想法"
+  url = "/notes/"
+  weight = 3
+
+[[menu.main]]
   name = "关于"
   url = "/about/"
-  weight = 3
+  weight = 4
