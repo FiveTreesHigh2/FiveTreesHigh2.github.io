@@ -1,0 +1,9 @@
+<footer class="footer container-wide">
+  <div>© {{ now.Year }} {{ .Site.Params.author }}</div>
+  <div>
+    {{ with .Site.Params.github }}<a href="{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
+    {{ with .Site.Params.twitter }} · <a href="{{ . }}" target="_blank" rel="noopener">Twitter</a>{{ end }}
+    {{ with .Site.Params.linkedin }} · <a href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
+    {{ with .Site.Params.email }} · <a href="mailto:{{ . }}">Email</a>{{ end }}
+  </div>
+</footer>

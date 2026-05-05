@@ -1,0 +1,45 @@
+baseURL = "https://FiveTreesHigh2.github.io/"
+languageCode = "zh-cn"
+title = "FiveTrees' small place"
+theme = ""  # 不用外部主题，我们自己写 layouts
+
+# 博客每页文章数
+paginate = 10
+
+# 让 Markdown 中的原生 HTML 也能渲染（写文章时偶尔需要插入自定义 HTML）
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    style = "github-dark"
+    lineNos = false
+    codeFences = true
+    guessSyntax = true
+
+# 站点参数（在模板里通过 .Site.Params.xxx 引用）
+[params]
+  author = "FiveTrees"
+  description = "个人主页与 Blog"
+  # 首页介绍文字
+  bio = "Hi, I'm studying AI Infra Now. Vector Search -> AI Infra. I will Update my thinking here."
+  # 社交链接（留空就不显示）
+  email = "ybs87@mail.ustc.edu.cn"
+  github = "https://github.com/FiveTreesHigh2"
+  twitter = ""
+  linkedin = ""
+
+# 顶部导航菜单
+[[menu.main]]
+  name = "首页"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Blog"
+  url = "/posts/"
+  weight = 2
+
+[[menu.main]]
+  name = "关于"
+  url = "/about/"
+  weight = 3

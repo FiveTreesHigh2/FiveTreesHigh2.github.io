@@ -1,0 +1,32 @@
+{{ define "main" }}
+<section class="container" style="padding-top: 4rem;">
+  <div class="hero-eyebrow reveal reveal-1">ARCHIVE</div>
+  <h1 class="hero-title reveal reveal-2" style="font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 3rem;">
+    所有 <em>文章</em>
+  </h1>
+
+  <ul class="post-list reveal reveal-3">
+    {{ range .Paginator.Pages }}
+      <li class="post-list-item">
+        <a href="{{ .RelPermalink }}">
+          <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+          <span class="post-title-list">{{ .Title }}</span>
+          <span class="post-arrow">→</span>
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+
+  {{ if gt .Paginator.TotalPages 1 }}
+    <nav class="pagination">
+      {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}">← Prev</a>
+      {{ end }}
+      <span class="active">{{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }}</span>
+      {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}">Next →</a>
+      {{ end }}
+    </nav>
+  {{ end }}
+</section>
+{{ end }}

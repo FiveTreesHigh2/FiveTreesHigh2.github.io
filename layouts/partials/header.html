@@ -1,0 +1,14 @@
+<header class="header">
+  <nav class="container-wide">
+    <div class="nav">
+      <a href="{{ "/" | relURL }}" class="nav-brand reveal reveal-1">
+        {{ .Site.Params.author }}<span class="dot"></span>
+      </a>
+      <ul class="nav-links reveal reveal-2">
+        {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+  </nav>
+</header>

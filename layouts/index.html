@@ -1,0 +1,39 @@
+{{ define "main" }}
+<section class="hero container">
+  <div class="hero-eyebrow reveal reveal-2">PERSONAL · BLOG · NOTES</div>
+  <h1 class="hero-title reveal reveal-3">
+    Hi, I'm <em>{{ .Site.Params.author }}</em>.
+  </h1>
+  <p class="hero-bio reveal reveal-4">{{ .Site.Params.bio }}</p>
+  <div class="hero-meta reveal reveal-5">
+    {{ with .Site.Params.github }}<a href="{{ . }}" target="_blank" rel="noopener">→ GitHub</a>{{ end }}
+    {{ with .Site.Params.email }}<a href="mailto:{{ . }}">→ Email</a>{{ end }}
+    {{ with .Site.Params.twitter }}<a href="{{ . }}" target="_blank" rel="noopener">→ Twitter</a>{{ end }}
+    {{ with .Site.Params.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener">→ LinkedIn</a>{{ end }}
+  </div>
+</section>
+
+<section class="section container">
+  <h2 class="section-title">最近文章</h2>
+  <ul class="post-list">
+    {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
+      <li class="post-list-item">
+        <a href="{{ .RelPermalink }}">
+          <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+          <span class="post-title-list">{{ .Title }}</span>
+          <span class="post-arrow">→</span>
+        </a>
+      </li>
+    {{ else }}
+      <li class="post-list-item" style="padding: 1.5rem 0; color: var(--text-muted);">
+        还没有文章。把 markdown 文件放到 <code>content/posts/</code> 目录就会显示在这里。
+      </li>
+    {{ end }}
+  </ul>
+  {{ if gt (len (where .Site.RegularPages "Section" "posts")) 5 }}
+    <p style="margin-top: 2rem; font-family: var(--font-mono); font-size: 0.9rem;">
+      <a href="{{ "/posts/" | relURL }}" style="color: var(--accent); text-decoration: none;">查看全部文章 →</a>
+    </p>
+  {{ end }}
+</section>
+{{ end }}
