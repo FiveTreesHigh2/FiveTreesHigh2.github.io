@@ -2,17 +2,17 @@
    Design tokens
    ========================================================= */
 :root {
-  --bg: #0F0E0C;
-  --bg-soft: #16140F;
-  --surface: #1C1A14;
-  --border: #2A2620;
-  --text: #EDE6D6;
-  --text-dim: #8B8275;
-  --text-muted: #5A5448;
-  --accent: #FF6B35;
-  --accent-soft: #FFB088;
-  --accent-glow: rgba(255, 107, 53, 0.18);
-  --cream: #F5EBD7;
+  --bg: #F5EDDC;
+  --bg-soft: #EFE5D0;
+  --surface: #E8DCC1;
+  --border: #D4C5A3;
+  --text: #2A2218;
+  --text-dim: #6B5D44;
+  --text-muted: #9A8B6E;
+  --accent: #C4451C;
+  --accent-soft: #E8794A;
+  --accent-glow: rgba(196, 69, 28, 0.15);
+  --cream: #F5EDDC;
 
   --font-display: "Fraunces", "Noto Serif SC", Georgia, serif;
   --font-body: "Inter Tight", "Noto Sans SC", -apple-system, sans-serif;
@@ -63,8 +63,8 @@ body::after {
   height: 700px;
   pointer-events: none;
   z-index: 0;
-  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
-  filter: blur(40px);
+  background: radial-gradient(circle, rgba(216, 89, 62, 0.12) 0%, transparent 60%);
+  filter: blur(60px);
   animation: drift 18s ease-in-out infinite alternate;
 }
 
