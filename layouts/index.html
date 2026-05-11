@@ -50,13 +50,13 @@
       </li>
     {{ else }}
       <li class="post-list-item" style="padding: 1.5rem 0; color: var(--text-muted);">
-        还没有想法。把 markdown 文件放到 <code>content/thinks/</code> 目录就会显示在这里。
+        还没有想法。把 markdown 文件放到 <code>content/thinkings/</code> 目录就会显示在这里。
       </li>
     {{ end }}
   </ul>
-  {{ if gt (len (where .Site.RegularPages "Section" "thinks")) 5 }}
+  {{ if gt (len (where .Site.RegularPages "Section" "thinkings")) 5 }}
     <p style="margin-top: 2rem; font-family: var(--font-mono); font-size: 0.9rem;">
-      <a href="{{ "/thinks/" | relURL }}" style="color: var(--accent); text-decoration: none;">查看全部想法 →</a>
+      <a href="{{ "/thinkings/" | relURL }}" style="color: var(--accent); text-decoration: none;">查看全部想法 →</a>
     </p>
   {{ end }}
 </section>
